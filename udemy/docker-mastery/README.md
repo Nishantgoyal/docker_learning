@@ -5,7 +5,7 @@
 | Section | Topic | Progress |
 | ---- | ---- | ---- |
 | Section 1 | Course Introduction and Docker Intro | done |
-| Section 2 | The Best Way to Setup Docker for your OS | in-progress |
+| Section 2 | The Best Way to Setup Docker for your OS | done |
 | Section 3 | Creating and using containers like a Boss | TODO |
 | Section 4 | Container Images, Where to find them, and how to build them | TODO |
 | Section 5 | Container Lifetime & Persistent Data | TODO |
