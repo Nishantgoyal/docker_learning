@@ -59,4 +59,10 @@
 - All containers on a virtual network can talk to each other without `-p`
 - To view the ports of a container: `docker container port <container id/name>`
 
+## Managing Virtual Networks
 
+- Show network: `docker network ls`
+- Inspect network: `docker network inspect <network_name>`
+- Create a network: `docker network create --driver <driver> <network_name>`
+- Attach a network to a container: `docker network connect`
+- Detach a network to a container: `docker network disconnect`
