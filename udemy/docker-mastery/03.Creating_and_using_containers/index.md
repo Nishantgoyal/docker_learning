@@ -37,3 +37,9 @@
 ## Containers vs VMs
 
 - Containers are just processes restricted to the resources they can access inside the host
+
+## CLI Process Monitoring
+
+- process list in one container: `docker container top`
+- details of one container config: `docker container inspect`
+- performance monitoring for all containers: `docker container stat`
