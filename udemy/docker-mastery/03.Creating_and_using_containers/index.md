@@ -51,3 +51,12 @@
   - This will replace the `CMD` and executed the command specified
 - To attach to a running container and get a shell: `docker container exec -it <container id/name> <command>`
 - To attach back to a stopped container on start: `docker container start -ai <container id/name>`
+
+## Docker Networks
+
+- Each container connects to a private virtual network called "bridge"
+- Each virtual network routes through NAT firewall on host IP
+- All containers on a virtual network can talk to each other without `-p`
+- To view the ports of a container: `docker container port <container id/name>`
+
+
