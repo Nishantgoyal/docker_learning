@@ -22,3 +22,13 @@
 - To stop a running container: `docker container stop <container-id>`
 - To list all containers: `docker container ls -a`
 - To see logs of a running container: `docker container logs <container name/id>`
+
+## What happens in 'docker container run'
+
+1. Looks for the image locally in image cache, doesn't find anything
+2. Then looks in remote image repository (defaults to Docker Hub)
+3. Download the latest verstion (if none specified)
+4. Creates new container based on that image and prepares to start
+5. Gives it a virtual IP on a private network inside docker network
+6. Opens up host port (if published), and forward traffic to the container port
+7. Starts container by using CMD in the image Dockerfile
