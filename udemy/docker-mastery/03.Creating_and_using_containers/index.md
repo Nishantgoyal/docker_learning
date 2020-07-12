@@ -22,6 +22,7 @@
 - To stop a running container: `docker container stop <container-id>`
 - To list all containers: `docker container ls -a`
 - To see logs of a running container: `docker container logs <container name/id>`
+- To see the list of running processes inside a container: `docker container top <container name/id>`
 
 ## What happens in 'docker container run'
 
@@ -32,3 +33,7 @@
 5. Gives it a virtual IP on a private network inside docker network
 6. Opens up host port (if published), and forward traffic to the container port
 7. Starts container by using CMD in the image Dockerfile
+
+## Containers vs VMs
+
+- Containers are just processes restricted to the resources they can access inside the host
