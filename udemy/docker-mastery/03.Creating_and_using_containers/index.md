@@ -18,6 +18,7 @@
   3. `-p` (publish) option opened port 8080 on the host IP, and routed that traffic to the container IP on post 80
   4. `-d` (detatch) option will run the application in the background
   5. `--name` can be used to provide a unique name to the container
+  6. `-it` can be used to start a container interactively
 - To list running containers: `docker container ls`
 - To stop a running container: `docker container stop <container-id>`
 - To list all containers: `docker container ls -a`
@@ -43,3 +44,10 @@
 - process list in one container: `docker container top`
 - details of one container config: `docker container inspect`
 - performance monitoring for all containers: `docker container stat`
+
+## Getting a shell inside containers
+
+- To start a container interactively: `docker container run -it <image> <command>`
+  - This will replace the `CMD` and executed the command specified
+- To attach to a running container and get a shell: `docker container exec -it <container id/name> <command>`
+- To attach back to a stopped container on start: `docker container start -ai <container id/name>`
