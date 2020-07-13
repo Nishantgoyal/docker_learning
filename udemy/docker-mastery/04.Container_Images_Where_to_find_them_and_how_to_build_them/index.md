@@ -23,4 +23,6 @@
 - To retag an image: `docker image tag <source image> <new image>`
 - To push an image to remote repository: `docker image push <user>/<repo>:<tag>`
   - require login: `docker login`
+- Building Docker Images: `docker build -t <image_name> -f <file_name>`
+  - default <file_name> is `Dockerfile`
 
