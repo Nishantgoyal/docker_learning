@@ -66,3 +66,10 @@
 - Create a network: `docker network create --driver <driver> <network_name>`
 - Attach a network to a container: `docker network connect`
 - Detach a network to a container: `docker network disconnect`
+
+## DNS
+
+- DNS is the key to easy inter-container communication
+- use `--link` option to enable DNS on default bridge network.
+- Docker daemon has a built-in DNS server that containers use by default.
+- Docker defaults the hostname to the container name, but one can also set `aliases`
