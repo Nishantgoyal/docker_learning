@@ -35,3 +35,20 @@ It is a methodology for building software-as-a-service apps.
   - Apps sometime store configs as constants which is a violation of the twelve-factor.
 - This defination of _config_ does not include internal application config, such as routes. It does not vary between deploys and hence is best done in code.
 - In a twelve-factor app, env vars are granular controls, each fully independent to other.
+
+## 4. Backing Services
+
+- Treat backing services as attached resources.
+- A backing service is any service the app consumes over the network as part of its normal operation. Normally these are local to the application. 
+  - datastores: MySQL, CouchDB
+  - messaging/queueing system: Kafka, RabbitMQ
+  - SMTP services for outbound email
+  - Caching systems
+- In addition, the app may use services provided and managed by third parties, like:
+  - metric-gathering: New Relic or Loggly
+  - API-accessible consumers: Twitter
+- The code for a twelve-factor app makes no distinction between local and third party services
+- To the app, both are attached resources, accessed via a URL or other locater/credentials stored in the config.
+- Each _distinct_ backing service is a resource.
+- Resources can be attached to and detatched from deploys at will.
+
