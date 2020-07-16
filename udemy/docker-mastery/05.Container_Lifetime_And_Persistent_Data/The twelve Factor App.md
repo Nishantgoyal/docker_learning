@@ -52,3 +52,21 @@ It is a methodology for building software-as-a-service apps.
 - Each _distinct_ backing service is a resource.
 - Resources can be attached to and detatched from deploys at will.
 
+## 5. Build, release, run
+
+- A codebase is transformed into a deploy through three stages:
+  - The _build stage_
+    - Converts a code repo into an executable bundle known as a `build`.
+    - It fetches vendors dependencies and compiles binaries and assets.
+    - Initiated by the developer's whenever new code is deployed
+  - The _release stage_
+    - Takes the build, and combines it with deploy's current config.
+    - ready for immediate execution in the execution environment.
+    - Every release should have a unique release ID
+    - Releases are an append-only ledger
+    - A release cannot be mutated once it is created.
+  - The _run stage_
+    - Run's the app in the execution environment
+    - Can happen automatically in cases such as a server reboot, etc.
+    - Should be kept to as few moving parts as possible.
+- **The twelve-factor app uses strict seperation between the build, release, and run stages.**
