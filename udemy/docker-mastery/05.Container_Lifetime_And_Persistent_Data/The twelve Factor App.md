@@ -71,7 +71,7 @@ It is a methodology for building software-as-a-service apps.
     - Should be kept to as few moving parts as possible.
 - **The twelve-factor app uses strict seperation between the build, release, and run stages.**
 
-## Processes
+## 6. Processes
 
 - The app is executed in the execution environment as one or more processes.
 - Twelve-factor app processes are stateless and share nothing.
@@ -83,10 +83,20 @@ It is a methodology for building software-as-a-service apps.
   - Sticky sessions are a violation of twelve-factor and should never be relied on.
   - This data should be stored in a datastore such as "Memcached" or "Redis".
 
-## Port binding
+## 7. Port binding
 
 - Export services via Port binding
 - The twelve-factor app is completely self-contained and does not rely on runtime injection of a webserver into the execution environment to create a web-facing service.
 - The web-app exports **HTTP as a service** by binding to a port, and listening to requests coming in on that port.
 - With this approach, one app can become a _backing service_ for another app, by using the URL as a resource handle.
 
+## 8. Concurrency
+
+- The twelve-factor app recommends processes to be:
+  - share-nothing
+  - horizontally partitionable
+  - handle their own internal multiplexing
+  - able to span multiple processes running on multiple physical machines.
+  - should not daemonize or write PID files, instead rely on OS' system manager for that.
+- The apps take strong cues from the **Unix process model for running service daemons**
+  - Each type of work is assigned to a process type
