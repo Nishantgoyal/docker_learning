@@ -130,3 +130,8 @@ It is a methodology for building software-as-a-service apps.
   - Each running process writes its event stream, unbuffered, to _stdout_.
 - In staging or production environment each process stream is captured, collated together, and routed
 - Process is completely managed by the execution environment, and not configurable or even visible to the apps.
+
+## 12. Admin Process
+
+- Run admin/management tasks as one-off processes.
+- These should be run in an identical environment as the regular _long running processes_ of the app.
