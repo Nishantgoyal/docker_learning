@@ -70,3 +70,15 @@ It is a methodology for building software-as-a-service apps.
     - Can happen automatically in cases such as a server reboot, etc.
     - Should be kept to as few moving parts as possible.
 - **The twelve-factor app uses strict seperation between the build, release, and run stages.**
+
+## Processes
+
+- The app is executed in the execution environment as one or more processes.
+- Twelve-factor app processes are stateless and share nothing.
+- Any data that needs to be persisted needs to be stored in a stateful _backing service_, typically a database.
+- The memory-space or filesystem can be used as a brief, single-transaction cache.
+- It never assumes that anything cached in memory or on disk will be available in a future request.
+- Some web-apps rely on "sticky sessions":
+  - caching user session data in memory of the app's process
+  - Sticky sessions are a violation of twelve-factor and should never be relied on.
+  - This data should be stored in a datastore such as "Memcached" or "Redis".
