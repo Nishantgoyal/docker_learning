@@ -13,3 +13,10 @@
   - e.g., docker container run -v mongo-data:/var/db mongo
 - To use custom drivers and labels, we can use the `docker volume create` command to create a volume before using it in `docker container run`
 
+## Bind Mounts
+
+- Maps a host file or directory to a container file or directory
+- Basically just two locations pointing to the same file(s)
+- This also skips UFS, and host files overwrite any in container
+- Can't use in Dockerfile, and must be specified at `container run`
+
