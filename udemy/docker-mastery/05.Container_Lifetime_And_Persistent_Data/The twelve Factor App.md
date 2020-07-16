@@ -120,3 +120,13 @@ It is a methodology for building software-as-a-service apps.
   - **The tools Gap**: Different stack.
 - The _twelve-factor_ app is designed for continuous deployment by keeping the gap as small as possible.
 - It twelve factor app resists the urge to use different backing services between development and production. 
+
+## 11. Logs
+
+- Treat logs as event streams
+- Logs are the **stream** of aggregated, time-ordered events collected from the output processes of all running processes and backing services.
+- A twelve-factor app never concerns itself with the routing or storage of its output stream.
+  - It should not attemt to write to or manage logfiles.
+  - Each running process writes its event stream, unbuffered, to _stdout_.
+- In staging or production environment each process stream is captured, collated together, and routed
+- Process is completely managed by the execution environment, and not configurable or even visible to the apps.
