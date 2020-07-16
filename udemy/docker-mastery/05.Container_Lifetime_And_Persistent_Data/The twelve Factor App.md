@@ -110,3 +110,13 @@ It is a methodology for building software-as-a-service apps.
 - Rapid deployment of code/config changes, and robustness of production deploys
 - Processes shut-down gracefully when they receive a SIGTERM signal
 - Processes should also be robust against certain death.
+
+## 10. Dev/Prod parity
+
+- Keep development, staging, and production as similar as possible.
+- Gaps is environments:
+  - **The time Gap**: developers may work on code that takes days, weeks, or even months to go into production.
+  - **The personnal Gap**: Developers write code, ops engineers deploy it.
+  - **The tools Gap**: Different stack.
+- The _twelve-factor_ app is designed for continuous deployment by keeping the gap as small as possible.
+- It twelve factor app resists the urge to use different backing services between development and production. 
