@@ -82,3 +82,11 @@ It is a methodology for building software-as-a-service apps.
   - caching user session data in memory of the app's process
   - Sticky sessions are a violation of twelve-factor and should never be relied on.
   - This data should be stored in a datastore such as "Memcached" or "Redis".
+
+## Port binding
+
+- Export services via Port binding
+- The twelve-factor app is completely self-contained and does not rely on runtime injection of a webserver into the execution environment to create a web-facing service.
+- The web-app exports **HTTP as a service** by binding to a port, and listening to requests coming in on that port.
+- With this approach, one app can become a _backing service_ for another app, by using the URL as a resource handle.
+
