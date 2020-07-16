@@ -100,3 +100,13 @@ It is a methodology for building software-as-a-service apps.
   - should not daemonize or write PID files, instead rely on OS' system manager for that.
 - The apps take strong cues from the **Unix process model for running service daemons**
   - Each type of work is assigned to a process type
+
+## 9. Disposability
+
+- The twelve-factor's apps are _disposable_
+  - Can be started or stopped at a moment's notice
+  - Strive to _minimize startup time_
+- Fast Scaling
+- Rapid deployment of code/config changes, and robustness of production deploys
+- Processes shut-down gracefully when they receive a SIGTERM signal
+- Processes should also be robust against certain death.
