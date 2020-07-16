@@ -8,7 +8,7 @@
 | Section 2  | The Best Way to Setup Docker for your OS                       | done        |
 | Section 3  | Creating and using containers like a Boss                      | done        |
 | Section 4  | Container Images, Where to find them, and how to build them    | done        |
-| Section 5  | Container Lifetime & Persistent Data                           | in-progress |
+| Section 5  | Container Lifetime & Persistent Data                           | done        |
 | Section 6  | Making it Easier with Docker Compose: The Multi Container Tool | TODO        |
 | Section 7  | Swarm Intro and Creating a 3-node Swarm Cluster                | TODO        |
 | Section 8  | Swarm Basic Features and how to Use them In your workflow      | TODO        |
