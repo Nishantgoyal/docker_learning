@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  app:
+    image: drupal
+    ports:
+      - 8080:80
+      - 9000:9000
+    volumes:
+      - modules:/var/www/html/modules
+      - profiles:/var/www/html/profiles
+      - themes:/var/www/html/themes
+      - sites:/var/www/html/sites
+  db:
+    image: postgres:9.6.18-alpine
+    environment:
+      POSTGRES_DB: drupal
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+volumes:
+  modules:
+  profiles:
+  themes:
+  sites:
